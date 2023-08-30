@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleSheet" href="レースゲーム.css">
+    <title>レースゲーム(プロトタイプ)</title>
+</head>
+<body>
+    <h1>レースゲーム(プロトタイプ)</h1>
+    <canvas width="512px" height="384px" id="canvas"></canvas>
+    <br>
+    <canvas width="512px" height="96px" id="canvasSub"></canvas>
+    <div id="control">
+        <h3>　操作方法</h3>
+        <ul>
+            <li>左右矢印キーで方向転換</li>
+            <li>上矢印キーで加速</li>
+            <li>下矢印キーで減速または一定速度で後退</li>
+            <li>黄色は道で黄緑が草(スピードが遅くなる)、赤が障害物(当たると跳ね返る)</li>
+        </ul>
+    </div>
+    
+    <script type="text/javascript" src="レースゲーム.js"></script>
+</body>
+</html>

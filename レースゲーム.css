@@ -1,0 +1,16 @@
+h1{
+    color:#000000;
+}
+#canvas{
+    background-color:#00FF00;
+}
+#canvasSub{
+    background-color:#000000;
+}
+h3{
+    height:10px;
+}
+#control{
+    border:1px #000000 solid;
+    width:640px;
+}
