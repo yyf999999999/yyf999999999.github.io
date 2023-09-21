@@ -102,7 +102,7 @@ function input(e){
         while (inp[0]==ans[0]/*&&jn.includes(inp[0])*/&&ans.length!=0){
             inp=inp.slice(1);ans=ans.slice(1);
         }
-        if (ans.length>=inp.length){
+        if (enToJn(enInput).split("").slice(0,-1).join("")!=enToJn(enAnswer).split("").join("")){
             if (jnVowel.includes(inp.join(""))){
                 inp[0]=enVowel[jnVowel.indexOf(inp[0])];
             }
