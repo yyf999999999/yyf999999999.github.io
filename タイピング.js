@@ -1,5 +1,4 @@
-import data from "./language.JSON" assert {type:"json"};
-export default data;
+import data from "./language.json";
 console.log(data.type);
 const jnSentence1=document.getElementById("jnSentence1");
 const enSentence=document.getElementById("enSentence");
