@@ -1,7 +1,7 @@
-const jnSentence1=document.getElementById("jnSentence1");
-const enSentence=document.getElementById("enSentence");
-const jnSentence2=document.getElementById("jnSentence2");
-const jnContent=document.getElementById("jnContent");
+const jnSentence1=document.getElementById("jnSentence1");//元の日本語文
+const enSentence=document.getElementById("enSentence");//ローマ字に変換した文
+const jnSentence2=document.getElementById("jnSentence2");//入力した日本語文
+const jnContent=document.getElementById("jnContent");//入力フォーム
 var jn=["あ","い","う","え","お","か","き","く","け","こ","さ","し","す","せ","そ","た","ち","つ","て","と",
 "な","に","ぬ","ね","の","は","ひ","ふ","へ","ほ","ま","み","む","め","も","や","ゆ","よ","ら","り","る","れ","ろ",
 "わ","ゐ","ゑ","を","ん","ヴ","が","ぎ","ぐ","げ","ご","ざ","じ","ず","ぜ","ぞ","だ","ぢ","づ","で","ど",
@@ -13,7 +13,7 @@ var jn=["あ","い","う","え","お","か","き","く","け","こ","さ","し",
 "ぎゃ","ぎぃ","ぎゅ","ぎぇ","ぎょ","ぐぁ","ぐぃ","ぐぅ","ぐぇ","ぐぉ","じゃ","じぃ","じゅ","じぇ","じょ",
 "ぢゃ","ぢぃ","ぢゅ","ぢぇ","ぢょ","でゃ","でぃ","でゅ","でぇ","でょ","どぁ","どぃ","どぅ","どぇ","どぉ",
 "びゃ","びぃ","びゅ","びぇ","びょ","ぴゃ","ぴぃ","ぴゅ","ぴぇ","ぴょ",
-"ぁ","ぃ","ぅ","ぇ","ぉ","ゃ","ゅ","ょ","っ","ゎ","ヵ","ヶ","ー","、","。","・"],
+"ぁ","ぃ","ぅ","ぇ","ぉ","ゃ","ゅ","ょ","っ","ゎ","ヵ","ヶ","ー","、","。","・"],//文字一覧(日本語)
     en=[["a"],["i","yi"],["u","wu","whu"],["e"],["o"],["ka","ca"],["ki"],["ku","qu","cu"],["ke"],["ko","co"],
     ["sa"],["si","shi","ci"],["su"],["se","ce"],["so"],["ta"],["ti","chi"],["tu","tsu"],["te"],["to"],
     ["na"],["ni"],["nu"],["ne"],["no"],["ha"],["hi"],["hu","fu"],["he"],["ho"],["ma"],["mi"],["mu"],["me"],["mo"],
@@ -35,10 +35,11 @@ var jn=["あ","い","う","え","お","か","き","く","け","こ","さ","し",
     ["pya"],["pyi"],["pyu"],["pye"],["pyo"],
     ["xa","la"],["xi","li","xyi","lyi"],["xu","lu"],["xe","le","xye","lye"],["xo","lo"],
     ["xya","lya"],["xyu","lyu"],["xyo","lyo"],["xtu","xtsu","ltu","ltsu"],["xwa","lwa"],
-    ["xka","lka"],["xke","lke"],["-"],[","],["."],["/"]],
+    ["xka","lka"],["xke","lke"],["-"],[","],["."],["/"]],//日本語に対応したローマ字
     enCharacter=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
-    "q","r","s","t","u","v","w","x","y","z","-",",",".","/"],
-    jnInput,jnVowel=jn.slice(0,5),enVowel=en.slice(0,5),enInput="",enInputS="";
+    "q","r","s","t","u","v","w","x","y","z","-",",",".","/"],//文字一覧(ローマ字)
+    jnInput,jnVowel=jn.slice(0,5),enVowel=en.slice(0,5),enInput="";
+//jnINput=>タイピングされた日本語を表示,jnVowel=>日本語の母音,enVowel=>英語の母音,enInput=>タイピングされた純粋な文を表示
 for (i=0;i<enVowel.length;i++){
     enVowel[i]=enVowel[i][0];
 }
