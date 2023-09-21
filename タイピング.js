@@ -1,5 +1,6 @@
 import data from "./language.JSON" assert {type:"json"};
 export default data;
+console.log(data);
 const jnSentence1=document.getElementById("jnSentence1");
 const enSentence=document.getElementById("enSentence");
 const jnSentence2=document.getElementById("jnSentence2");
