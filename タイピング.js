@@ -116,7 +116,7 @@ function input(e){
             }else{
                 var characters=[[ans[0]],[ans[1]]];
             }
-            var character,character2,tfC=false,tfI=false;
+            var character,character2,character3,tfC=false,tfI=false;
             if (/*Array.isArray(characters[0])&&*/characters[0][0]){
                 for (i=0;i<characters[0].length;i++){
                     tfI=true;
@@ -135,8 +135,30 @@ function input(e){
                     }
                     if (tfI&&!tfC){
                         if (ans[0]=="っ"){
-                            ans[0]=jnToEn(ans[1])[0];
-                            ans.unshift("");
+                            if (inp.length!=0&&character2!=undefined){
+                                console.log(jn.includes(ans[1]+ans[2]),ans[1]+ans[2]);
+                                if (ans.length>2){
+                                    if (jn.includes(ans[1]+ans[2])){
+                                        character3=en[jn.indexOf(ans[1]+ans[2])];
+                                        for (j=0;j<character3.length;j++){
+                                            if (character3[j][0]==inp[0]) break;
+                                        }
+                                        printCharacter+=character3[j][0]+character3[j];
+                                        ans.splice(0,2);
+                                    }else{
+                                        printCharacter+=character2[0]+character2.join("");
+                                        ans.splice(0,1);
+                                    }
+                                }else{
+                                    printCharacter+=character2[0]+character2.join("");
+                                    ans.splice(0,1);
+                                }
+                            }else{
+                                ans[0]=jnToEn(ans[1])[0];
+                                ans.unshift("");
+                            }
+                            console.log(ans,ans.join(""));
+                            
                         }else{
                             printCharacter+=character.join("");
                         }
